@@ -1,0 +1,12 @@
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+.form{
+z-index: 0;
+position: relative;
+color:palevioletred;
+background-image: none;
+background-attachment: scroll;
+background-size: auto;
+}

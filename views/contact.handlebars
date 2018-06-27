@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">HTML Form Templates</h2>
+                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">
+                    Easily add subscribe and contact forms without any server-side integration.
+                </h3>
+            </div>
+        </div>
+    </div>
+<!-- include form from below line -->
+<div class="container">
+  {{msg}}
+    <form method = "POST" action= "send" class="form-horizontal needs-validation" novalidate>
+  <div class="col-md-6 mb-3">
+      <label for="validationCustom01">First name</label>
+      <input type="text" name="firstName" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+  </div>
+  <div class="col-md-6 mb-3">
+      <label for="validationCustom02">Last name</label>
+      <input type="text" name="lastName" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+  </div>
+  <div class="col-md-6 mb-3">
+      <label for="validationCustomUsername">Username</label>
+      <input type="text" name="emailAddress" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+  </div>
+  <div class="col-md-6 mb-3">
+      <label for="validationCustom03">City</label>
+      <input type="text" name="cityName" class="form-control" id="validationCustom03" placeholder="City" required>
+  </div>
+  <div class="col-md-6 mb-3">
+      <label for="validationCustom04">State</label>
+      <input type="text" name="stateName" class="form-control" id="validationCustom04" placeholder="State" required>
+  </div>
+  <div class="col-md-6 mb-3">
+      <label for="validationCustom05">Zip</label>
+      <input type="text" name="zip" class="form-control" id="validationCustom05" placeholder="Zip" required>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+    
+</body>
+
+</body>
+</html>
